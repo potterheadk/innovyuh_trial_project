@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical AI Analysis - Services</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-brain"></i>
+                <span>MedAI Analyst</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="/services" class="active"><i class="fas fa-list"></i> Services</a></li>
+                <li><a href="/assessment"><i class="fas fa-microscope"></i> Image Analysis</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <h1>Our Services</h1>
+        <p>Discover the full range of our AI-powered medical image analysis capabilities</p>
+    </header>
+
+    <section class="services-section">
+        <div class="service-card">
+            <div class="service-icon"><i class="fas fa-x-ray"></i></div>
+            <div class="service-content">
+                <h2>X-Ray Analysis</h2>
+                <p>Our AI system can analyze chest X-rays to identify potential abnormalities including:</p>
+                <ul>
+                    <li>Pneumonia detection</li>
+                    <li>Lung nodule identification</li>
+                    <li>Fracture detection</li>
+                    <li>Cardiomegaly assessment</li>
+                </ul>
+                <a href="/assessment" class="btn secondary">Try X-Ray Analysis</a>
+            </div>
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon"><i class="fas fa-brain"></i></div>
+            <div class="service-content">
+                <h2>MRI Scan Interpretation</h2>
+                <p>Upload MRI scans for detailed analysis of:</p>
+                <ul>
+                    <li>Brain structure abnormalities</li>
+                    <li>Joint and soft tissue injuries</li>
+                    <li>Spinal conditions</li>
+                    <li>Tumor identification and measurement</li>
+                </ul>
+                <a href="/assessment" class="btn secondary">Try MRI Analysis</a>
+            </div>
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon"><i class="fas fa-heartbeat"></i></div>
+            <div class="service-content">
+                <h2>CT Scan Evaluation</h2>
+                <p>Get detailed insights from CT scans for:</p>
+                <ul>
+                    <li>Organ assessment</li>
+                    <li>Vascular conditions</li>
+                    <li>Trauma evaluation</li>
+                    <li>Tumor staging</li>
+                </ul>
+                <a href="/assessment" class="btn secondary">Try CT Analysis</a>
+            </div>
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon"><i class="fas fa-microscope"></i></div>
+            <div class="service-content">
+                <h2>Histopathology Analysis</h2>
+                <p>Upload microscopic tissue images for:</p>
+                <ul>
+                    <li>Cell morphology assessment</li>
+                    <li>Tumor classification</li>
+                    <li>Tissue abnormality detection</li>
+                    <li>Cancer cell identification</li>
+                </ul>
+                <a href="/assessment" class="btn secondary">Try Pathology Analysis</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="dual-ai-section">
+        <div class="dual-ai-content">
+            <h2>Dual AI Approach</h2>
+            <p>Our platform leverages the unique strengths of two advanced AI models:</p>
+            
+            <div class="ai-model-cards">
+                <div class="ai-model-card">
+                    <h3><i class="fab fa-google"></i> Gemini 1.5 Pro</h3>
+                    <p>Google's multimodal AI excels at:</p>
+                    <ul>
+                        <li>Detailed anatomical recognition</li>
+                        <li>Context-aware analysis</li>
+                        <li>Pattern recognition across modalities</li>
+                    </ul>
+                </div>
+                
+                <div class="ai-model-card">
+                    <h3><i class="fas fa-layer-group"></i> Llama 3.2</h3>
+                    <p>Meta's advanced AI specializes in:</p>
+                    <ul>
+                        <li>Medical terminology understanding</li>
+                        <li>Fine-grained feature detection</li>
+                        <li>Research-based diagnostic suggestions</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="combined-analysis">
+                <h3><i class="fas fa-plus-circle"></i> Combined Analysis</h3>
+                <p>Our platform synthesizes insights from both models to provide:</p>
+                <ul>
+                    <li>Higher accuracy through cross-validation</li>
+                    <li>More comprehensive findings</li>
+                    <li>Reduced false positives and negatives</li>
+                    <li>Clear explanation of confidence levels</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <h2>Ready to Experience Advanced Medical Image Analysis?</h2>
+        <p>Our platform combines the analytical capabilities of multiple AI models to provide you with comprehensive insights.</p>
+        <a href="/assessment" class="btn primary"><i class="fas fa-microscope"></i> Start Analyzing</a>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3><i class="fas fa-brain"></i> MedAI Analyst</h3>
+                <p>Combining the power of Gemini 1.5 Pro & Llama 3.2 for advanced medical image analysis</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="/home">Home</a></li>
+                    <li><a href="/services">Services</a></li>
+                    <li><a href="/assessment">Image Analysis</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p><i class="fas fa-envelope"></i> support@medaianalyst.example</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 MedAI Analyst. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical AI Analysis - Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-brain"></i>
+                <span>MedAI Analyst</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/" class="active"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="/services"><i class="fas fa-list"></i> Services</a></li>
+                <li><a href="/assessment"><i class="fas fa-microscope"></i> Image Analysis</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero-section">
+        <div class="hero-content">
+            <h1>Advanced Medical Image Analysis</h1>
+            <h2>Powered by State-of-the-Art AI Models</h2>
+            <p>Combining the analytical power of Gemini 1.5 Pro and Llama 3.2 for accurate medical insights</p>
+            <div class="hero-buttons">
+                <a href="/assessment" class="btn primary"><i class="fas fa-microscope"></i> Try Analysis Now</a>
+                <a href="/services" class="btn secondary"><i class="fas fa-info-circle"></i> Learn More</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="{{ url_for('static', filename='img/hero-image.svg') }}" alt="Medical AI">
+        </div>
+    </header>
+
+    <section class="features">
+        <h2>Why Choose Our Platform?</h2>
+        <div class="feature-cards">
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-robot"></i></div>
+                <h3>Dual AI Analysis</h3>
+                <p>Get insights from two cutting-edge AI models for more comprehensive results</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-bolt"></i></div>
+                <h3>Fast Results</h3>
+                <p>Receive detailed analysis in seconds, not hours or days</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+                <h3>Secure Processing</h3>
+                <p>Your medical images are processed securely and privately</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-comments"></i></div>
+                <h3>Interactive Chat</h3>
+                <p>Ask follow-up questions about your analysis results</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="how-it-works">
+        <h2>How It Works</h2>
+        <div class="steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-icon"><i class="fas fa-upload"></i></div>
+                <h3>Upload Your Medical Image</h3>
+                <p>Simply drag and drop or select your medical imaging file</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-icon"><i class="fas fa-cogs"></i></div>
+                <h3>AI Processing</h3>
+                <p>Our dual AI system analyzes the image using complementary approaches</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-icon"><i class="fas fa-clipboard-list"></i></div>
+                <h3>Review Results</h3>
+                <p>Access detailed findings from both models and a synthesized final analysis</p>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-icon"><i class="fas fa-question-circle"></i></div>
+                <h3>Ask Questions</h3>
+                <p>Use the chat assistant to inquire about specifics in your results</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <h2>Ready to Experience Advanced Medical Image Analysis?</h2>
+        <p>Our platform combines the analytical capabilities of multiple AI models to provide you with comprehensive insights.</p>
+        <a href="/assessment" class="btn primary"><i class="fas fa-microscope"></i> Start Analyzing</a>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3><i class="fas fa-brain"></i> MedAI Analyst</h3>
+                <p>Combining the power of Gemini 1.5 Pro & Llama 3.2 for advanced medical image analysis</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="/home">Home</a></li>
+                    <li><a href="/services">Services</a></li>
+                    <li><a href="/assessment">Image Analysis</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p><i class="fas fa-envelope"></i> support@medaianalyst.example</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 MedAI Analyst. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
