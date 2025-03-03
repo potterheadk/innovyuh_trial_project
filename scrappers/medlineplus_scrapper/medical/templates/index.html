@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Viewer</title>
+    <style>
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        table, th, td { border: 1px solid black; }
+        th, td { padding: 10px; text-align: left; }
+        input { margin: 10px; padding: 5px; }
+    </style>
+</head>
+<body>
+    <h1>JSON Viewer</h1>
+    <input type="text" id="category" placeholder="Filter by Category">
+    <input type="text" id="topicname" placeholder="Filter by Topic Name">
+    <button onclick="filterData()">Filter</button>
+    <table id="jsonTable">
+        <thead>
+            <tr>
+                <th>Category Name</th>
+                <th>Category URL</th>
+                <th>Topic Name</th>
+                <th>Topic URL</th>
+                <th>Details</th>
+                <th>Hyperlinks</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in data %}
+            <tr>
+                <td>{{ item.category_name }}</td>
+                <td><a href="{{ item.category_url }}">{{ item.category_url }}</a></td>
+                <td>{{ item.topic_name }}</td>
+                <td><a href="{{ item.topic_url }}">{{ item.topic_url }}</a></td>
+                <td>
+                    <ul>
+                        {% for detail in item.detailed_text %}
+                        <li><strong>{{ detail.title }}:</strong> {{ detail.content }}</li>
+                        {% endfor %}
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        {% for link in item.hyperlinks %}
+                        <li><a href="{{ link.url }}">{{ link.text }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <script>
+        async function filterData() {
+            const category = document.getElementById('category').value;
+            const topicname = document.getElementById('topicname').value;
+            const response = await fetch(`/filter?category=${category}&topicname=${topicname}`);
+            const data = await response.json();
+
+            const tableBody = document.getElementById('jsonTable').querySelector('tbody');
+            tableBody.innerHTML = '';
+
+            data.forEach(item => {
+                const details = item.detailed_text.map(detail => `<li><strong>${detail.title}:</strong> ${detail.content}</li>`).join('');
+                const links = item.hyperlinks.map(link => `<li><a href="${link.url}">${link.text}</a></li>`).join('');
+                
+                const row = `<tr>
+                    <td>${item.category_name}</td>
+                    <td><a href="${item.category_url}">${item.category_url}</a></td>
+                    <td>${item.topic_name}</td>
+                    <td><a href="${item.topic_url}">${item.topic_url}</a></td>
+                    <td><ul>${details}</ul></td>
+                    <td><ul>${links}</ul></td>
+                </tr>`;
+                tableBody.innerHTML += row;
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #1e1e1e; /* Dark grey background */
+    color: #e0e0e0; /* Light grey text for contrast */
+}
+
+.container {
+    background-color: #2e2e2e; /* Slightly lighter grey for the container */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+h1, h2 {
+    color: #ffffff; /* White headers for better visibility */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 10px 0;
+}
+
+button {
+    margin-left: 10px;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    color: white;
+}
+
+/* Delete Button */
+.delete-btn {
+    background-color: red;
+}
+
+.delete-btn:hover {
+    background-color: darkred;
+}
+
+/* Manual Scan Button */
+.scan-btn {
+    background-color: #4caf50; /* Green */
+}
+
+.scan-btn:hover {
+    background-color: #45a049;
+}
+
+/* Clear Logs Button */
+.clear-logs-btn {
+    background-color: #0073e6; /* Blue */
+}
+
+.clear-logs-btn:hover {
+    background-color: #005bb5;
+}
+
+/* Logs Section */
+.logs {
+    background-color: #3a3a3a; /* Dark grey logs section */
+    color: #e0e0e0;
+    padding: 15px;
+    border-radius: 5px;
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #555;
+}
+
+/* Links */
+a {
+    color: #4caf50; /* Green links for visibility */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

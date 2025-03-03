@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Database Tables</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/psql_data_modify.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Database Tables</h1>
+        <form action="/manual_scan" method="POST">
+            <button type="submit" class="scan-btn">Manual Scan</button>
+        </form>
+        <ul>
+            {% for table in tables %}
+                <li>
+                    <a href="/view/{{ table }}">{{ table }}</a>
+                    <form action="/delete/{{ table }}" method="POST" style="display:inline;">
+                        <button type="submit" class="delete-btn" data-table="{{ table }}">Delete</button>
+                    </form>
+                </li>
+            {% endfor %}
+        </ul>
+        <form action="/clear_logs" method="POST">
+            <button type="submit" class="clear-logs-btn">Clear Logs</button>
+        </form>
+        <h2>Logs</h2>
+        <div class="logs">
+            {% for log in logs %}
+                <p>{{ log }}</p>
+            {% endfor %}
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/psql_data_modify.js') }}"></script>
+</body>
+</html>
